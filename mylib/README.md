@@ -1,4 +1,4 @@
-# Mylib
+# mynewlib1
 
 Эта библиотека написана для реалшизации любых действий с факториалами и для вычислений формул, записанных в формате str.
 
@@ -38,4 +38,4 @@ if __name__ == '__main__':
 
 Install it using pip:
 ```bash
-pip install mylib
+pip install mynewlib1
