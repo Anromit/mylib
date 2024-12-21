@@ -1,37 +1,41 @@
-# My Library
+# Mylib
 
-Это чисто моя демонстрация навыков работы с выгрузкой библиотек для питона. Представленная библиотека является прототипом атомарного компилятора, который мало что умеет, но при переводе в библиотеку рабочких функций не потерял. Для проверки работы предлагаю проверить работу следующей программы
+Эта библиотека написана для реалшизации любых действий с факториалами и для вычислений формул, записанных в формате str.
 
 ```
-from MyLabLibraryTAM1 import Compiler, Atom, Pair
-
-# Пример работы с библиотекой
-compiler = Compiler()
-
-# Тест: создание атомов и пар
-atom1 = Atom("42")
-atom2 = Atom("24")
-pair = Pair(atom1, atom2)
-
-print("Atom1:", atom1.value)
-print("Atom2:", atom2.value)
-
-print("Pair sum:", pair.sum())
-print("Pair depth:", pair.depth())
-
-# Тест: выполнение программы с компилятором
-program = Pair(Atom("var"), Pair(Atom("x"), Pair(Atom("int"), Atom("10"))))
 
 
-compiler.run(program)
+from pr.init import factorial, permutation, compination, binkof, gamma, summaf
 
-# Проверка значения переменной
-var = compiler.find_var("x")
-print("Variable x:", var.value)
+n=int(input())
+def main():
+    # Пример использования функции factorial
+    n = 5
+    print(f"Факториал {n}! = {factorial(n)}")
+
+    # Пример использования функции permutation
+    print(f"Перестановка {n}! = {permutation(n)}")
+
+    # Пример использования функции combination
+    k = 3
+    print(f"Комбинация C({n}, {k}) = {compination(n, k)}")
+
+    # Пример используя функции binkof
+    print(f"Биномиальный коэффициент B({n}, {k}) = {binkof(n, k)}")
+
+    # Пример использования функции gamma
+    print(f"Гамма ({n}) = {gamma(n)}")
+
+    # Пример использования функции summaf
+print(f"Сумма факториалов от 0 до = {summaf(n)}")
+
+if __name__ == '__main__':
+    main()
+
 ```
 
 ## Installation
 
 Install it using pip:
 ```bash
-pip install MyLabLibraryTAM
+pip install mylib
